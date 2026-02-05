@@ -20,7 +20,7 @@ class TestLogin:
 
         assert icon.is_displayed() and user_name.is_displayed()
 
-        driver.quit()
+    
 
     def test_user_logout(self, driver):
 
@@ -38,4 +38,4 @@ class TestLogin:
         
         assert driver.find_element(*MainPage.LOGIN_AND_REGISTRATION_BUTTON) and not driver.find_elements(*MainPage.USER_ICON) and not driver.find_elements(*MainPage.USER_NAME)
 
-        driver.quit()
+ 

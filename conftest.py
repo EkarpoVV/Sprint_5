@@ -8,4 +8,5 @@ def driver():
     driver = webdriver.Chrome()
     driver.get("https://qa-desk.stand.praktikum-services.ru/")
     return driver
+    driver.quit()
 

@@ -48,8 +48,6 @@ class TestRegistration:
         
         assert email_red_border.is_displayed() and password_red_border.is_displayed() and password2_red_border.is_displayed() and  error.is_displayed()
 
-        driver.quit()
-
     def test_registration_exist_user(self, driver):
 
         driver.find_element(*MainPage.LOGIN_AND_REGISTRATION_BUTTON).click()
@@ -84,5 +82,3 @@ class TestRegistration:
         password2_red_border = driver.find_element(*RegistartionPopUp.PASSWORD2_RED_BORDER)
         
         assert email_red_border.is_displayed() and password_red_border.is_displayed() and password2_red_border.is_displayed() and  error.is_displayed()
-
-        driver.quit()
