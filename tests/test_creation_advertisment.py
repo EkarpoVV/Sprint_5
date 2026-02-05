@@ -10,9 +10,9 @@ class TestAdvertisment:
 
     def test_create_ad_unauthorized_user(self, driver):
         driver.find_element(*MainPage.CREATE_AD_BUTTON).click()
-        PoPup = WebDriverWait(driver,Waiter.WAIT_TIME).until(expected_conditions.visibility_of_element_located((CreatingAd.UNAUTORISED_POPUP)))
+        popup = WebDriverWait(driver,Waiter.WAIT_TIME).until(expected_conditions.visibility_of_element_located((CreatingAd.UNAUTORISED_POPUP)))
         
-        assert PoPup.is_displayed()
+        assert popup.is_displayed()
 
     def test_create_ad(self, driver):
         driver.find_element(*MainPage.LOGIN_AND_REGISTRATION_BUTTON).click()
