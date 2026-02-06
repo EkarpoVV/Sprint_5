@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from locators import *
-import test_data as td
+import data.test_data as td
 from config import *
 
 
@@ -26,7 +26,6 @@ class TestRegistration:
 
         assert icon.is_displayed() and user_name.is_displayed()
 
-        driver.quit()
 
     def test_registration_incorrect_format_email(self, driver):
 
